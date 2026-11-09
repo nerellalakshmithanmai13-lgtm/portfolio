@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N. Lakshmi Thanmai | Electronics & Communication Engineer | Portfolio (Batch 2027)</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Portfolio of Nerella Lakshmi Thanmai - Final-Year B.Tech ECE Student (9.59 CGPA) at Sri Venkateswara College of Engineering. Preparing for 2027 Campus Recruitment Drive. Specialized in IoT, ESP32, Python, C, and Applied AI/ML.">
+  <meta name="keywords" content="Lakshmi Thanmai, Nerella Lakshmi Thanmai, ECE Portfolio, B.Tech ECE, 2027 Campus Recruitment, ESP32 IoT, Embedded Systems, Python Developer, SVCE">
+  <meta name="author" content="Nerella Lakshmi Thanmai">
+
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230284c7'/><text x='50%' y='65%' font-size='50' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>LT</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Interactive PCB / Circuit Background Canvas -->
+  <canvas id="circuit-canvas"></canvas>
+
+  <!-- Ambient Glow Effects -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         NAVIGATION BAR
+         ==================================================================== -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="logo-brand">
+          <div class="logo-chip">LT</div>
+          <div class="logo-text">
+            <span class="logo-name">Lakshmi Thanmai</span>
+            <span class="logo-badge">ECE • Class of 2027</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Academics</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#lab" class="nav-link">Interactive Lab</a></li>
+          <li><a href="#research" class="nav-link">Research</a></li>
+          <li><a href="#certifications" class="nav-link">Honors</a></li>
+          <li><a href="#terminal-section" class="nav-link">CLI</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="data_analyst_portfolio.html" class="btn-recruiter-quick" style="border-color: #10b981; color: #10b981; background: rgba(16, 185, 129, 0.1);" title="Switch to Data Analyst & BI Portfolio">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Data Analyst View</span>
+          </a>
+
+          <button class="theme-btn" id="theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+          </button>
+          
+          <button class="btn-recruiter-quick" onclick="openRecruiterModal()" title="60-Second Recruiter Pitch">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Recruiter Pitch</span>
+          </button>
+
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="badge-pulse"></span>
+              <span style="font-size: 0.82rem; font-weight: 700; color: var(--accent-cyan);">
+                🎓 Campus Recruitment 2027 Ready | Available for Internships & Roles
+              </span>
+            </div>
+
+            <h1 class="hero-title">
+              Hello, I'm <br>
+              <span class="gradient-text">N. Lakshmi Thanmai</span>
+            </h1>
+
+            <div class="hero-tagline">
+              <span>Electronics & Communication Engineer</span>
+              <span style="color: var(--text-muted);">|</span>
+              <span style="color: var(--accent-emerald);">IoT & Embedded Prototyping</span>
+              <span style="color: var(--text-muted);">|</span>
+              <span style="color: var(--accent-purple);">Applied AI/ML</span>
+            </div>
+
+            <p class="hero-description">
+              A high-achieving, detail-oriented final-year B.Tech ECE undergraduate at <strong>Sri Venkateswara College of Engineering</strong> with a <strong>9.59 CGPA</strong>. Passionate about bridging embedded microcontrollers (ESP32) and Python automation, with published national conference research in soft computing and environmental surveillance.
+            </p>
+
+            <div class="hero-quick-meta">
+              <div class="meta-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>SVCE Tirupati (2023 - 2027)</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-star" style="color: var(--accent-amber);"></i>
+                <span><strong>9.59 / 10.0 CGPA</strong></span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Andhra Pradesh, India (Open to Relocation)</span>
+              </div>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fa-solid fa-microchip"></i>
+                <span>Explore Projects</span>
+              </a>
+
+              <a href="data_analyst_portfolio.html" class="btn btn-secondary" style="border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Data Analyst Portfolio</span>
+              </a>
+
+              <button class="btn btn-secondary" onclick="openResumeModal()">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>View ATS Resume</span>
+              </button>
+
+              <a href="#contact" class="btn btn-outline-gold">
+                <i class="fa-solid fa-handshake"></i>
+                <span>Hire Lakshmi</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Interactive Live Hardware Diagnostics Card -->
+          <div class="hero-visual">
+            <div class="terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot dot-red"></span>
+                  <span class="terminal-dot dot-yellow"></span>
+                  <span class="terminal-dot dot-green"></span>
+                </div>
+                <div class="terminal-title">
+                  <i class="fa-solid fa-terminal"></i>
+                  <span>thanmai@ece-boot: /sys/candidate-profile</span>
+                </div>
+                <span class="terminal-chip-badge">ESP32 • Python 3.12</span>
+              </div>
+
+              <div class="terminal-body">
+                <div class="term-line">
+                  <span class="term-prompt">sys-init:~$</span> <span class="term-cmd">load_candidate --profile "N_Lakshmi_Thanmai"</span>
+                </div>
+                <div class="term-line term-output-highlight">
+                  [OK] Candidate Profile Loaded Successfully
+                </div>
+                <div class="term-line">
+                  <span style="color:#64748b;">--------------------------------------------------</span>
+                </div>
+                <div class="term-line">
+                  • <span style="color:#94a3b8;">Department:</span> <strong>Electronics & Communication (ECE)</strong>
+                </div>
+                <div class="term-line">
+                  • <span style="color:#94a3b8;">University CGPA:</span> <strong class="term-output-gold">9.59 / 10.0</strong> <span style="color:#34d399;">(Top 1% Rank)</span>
+                </div>
+                <div class="term-line">
+                  • <span style="color:#94a3b8;">Primary Hardware:</span> <span>ESP32, Arduino, GPIOs, Relays, ADC Sensors</span>
+                </div>
+                <div class="term-line">
+                  • <span style="color:#94a3b8;">Programming:</span> <span>Python, C, Embedded Systems</span>
+                </div>
+                <div class="term-line">
+                  • <span style="color:#94a3b8;">Research Papers:</span> <span class="term-output-highlight">2 National Conferences (Soft Computing & GIS)</span>
+                </div>
+                <div class="term-line">
+                  • <span style="color:#94a3b8;">Awards:</span> <span class="term-output-gold">Best Student Award (ABVP Pratibha Purashkar 2025)</span>
+                </div>
+                <div class="term-line">
+                  • <span style="color:#94a3b8;">Recruitment Status:</span> <span class="term-output-highlight">ACTIVE & READY (Batch 2027)</span>
+                </div>
+                <div class="term-line">
+                  <span class="term-prompt">sys-init:~$</span> <span class="term-cmd">status_check --hardware</span>
+                </div>
+                <div class="term-line" style="color: #38bdf8;">
+                  [GPIO2: READY] [GPIO4: READY] [SOIL_ADC: ONLINE] [COMM: 115200 BAUD]
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Stats Row -->
+        <div class="hero-stats-row">
+          <div class="stat-card">
+            <span class="stat-number gradient-text">9.59</span>
+            <span class="stat-label">B.Tech ECE CGPA</span>
+            <span class="stat-sub">Sri Venkateswara College of Engg.</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number gradient-text">2+</span>
+            <span class="stat-label">Hardware & IoT Systems</span>
+            <span class="stat-sub">ESP32, Automation & Relays</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number gradient-text">2</span>
+            <span class="stat-label">Conference Research Papers</span>
+            <span class="stat-sub">NCA SCTE-2026 & IETE Published</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number gradient-gold-text">2025</span>
+            <span class="stat-label">Best Student Award</span>
+            <span class="stat-sub">ABVP Pratibha Purashkar</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         RECRUITER 2027 SPOTLIGHT BANNER
+         ==================================================================== -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 2rem;">
+      <div class="container">
+        <div class="recruiter-banner">
+          <div class="banner-grid">
+            <div class="banner-text">
+              <span class="badge badge-gold" style="margin-bottom: 0.75rem;">
+                <i class="fa-solid fa-trophy"></i> 2027 Campus Placement Value Proposition
+              </span>
+              <h3>Why Lakshmi Thanmai is an Exceptional Campus Hire</h3>
+              <p>
+                Recruiters seeking candidates with high academic discipline, verifiable hardware prototyping experience, and technical communication acumen will find an ideal match.
+              </p>
+
+              <div class="banner-reasons">
+                <div class="reason-item">
+                  <div class="reason-icon"><i class="fa-solid fa-award"></i></div>
+                  <div class="reason-content">
+                    <h4>Top-Decile Academic Consistency</h4>
+                    <p>9.59 B.Tech CGPA, 92.4% Intermediate, and 98.3% SSC demonstrate unwavering rigor and perseverance.</p>
+                  </div>
+                </div>
+
+                <div class="reason-item">
+                  <div class="reason-icon"><i class="fa-solid fa-microchip"></i></div>
+                  <div class="reason-content">
+                    <h4>Hardware-to-Software Synergy</h4>
+                    <p>Proficient in Python & C with hands-on ESP32 circuit breadboarding, sensor interfacing, and telemetry.</p>
+                  </div>
+                </div>
+
+                <div class="reason-item">
+                  <div class="reason-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                  <div class="reason-content">
+                    <h4>Research & Public Speaking Acumen</h4>
+                    <p>Presented AI Face Recognition research at national engineering conferences and published on drone GIS.</p>
+                  </div>
+                </div>
+
+                <div class="reason-item">
+                  <div class="reason-icon"><i class="fa-solid fa-bolt"></i></div>
+                  <div class="reason-content">
+                    <h4>Industry-Ready Fast Learner</h4>
+                    <p>Completed 120-hr AI/ML Virtual Internship (APSCHE & SmartBridge) and NIELIT 3D Printing training.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="banner-actions">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;">
+                Recruiter Quick Tools
+              </span>
+              <button class="btn btn-primary" onclick="openRecruiterModal()">
+                <i class="fa-solid fa-bolt"></i> 60-Sec Scorecard
+              </button>
+              <button class="btn btn-secondary" onclick="openResumeModal()">
+                <i class="fa-solid fa-file-pdf"></i> Printable ATS Resume
+              </button>
+              <a href="Nerella Lakshmi Thanmai.pdf" download="Nerella_Lakshmi_Thanmai_Resume.pdf" class="btn btn-outline-gold">
+                <i class="fa-solid fa-file-arrow-down"></i> Download Original PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT SECTION
+         ==================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill"><i class="fa-solid fa-user-astronaut"></i> Professional Profile</span>
+          <h2 class="section-title">Engineering With Purpose & Precision</h2>
+          <p class="section-subtitle">
+            Bridging fundamental electronics, embedded computing, and modern data-driven intelligence.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 2.5rem; backdrop-filter: blur(12px);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;">
+            <div>
+              <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-primary);">
+                Career Objective & Engineering Mindset
+              </h3>
+              <p style="margin-bottom: 1rem; line-height: 1.7; font-size: 0.98rem;">
+                A diligent and detail-oriented final-year B.Tech student in <strong>Electronics and Communication Engineering (ECE)</strong> seeking an impactful opportunity through the <strong>2027 campus recruitment drive</strong>.
+              </p>
+              <p style="margin-bottom: 1.25rem; line-height: 1.7; font-size: 0.98rem;">
+                Eager to apply analytical thinking, problem-solving methodologies, and strong communication skills to contribute to high-performance organizational goals, while continuously advancing in a collaborative work environment.
+              </p>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem;">
+                  <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i>
+                  <span><strong>Target Roles:</strong> Embedded Software Engineer, IoT Developer, Graduate Trainee, Python Engineer, AI/ML Associate</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem;">
+                  <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i>
+                  <span><strong>Availability:</strong> Immediate summer internships (2025/2026) & Full-time employment for Batch 2027</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem;">
+                  <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i>
+                  <span><strong>Core Tenets:</strong> Zero defect tolerance, systematic circuit testing, transparent technical documentation</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.75rem;">
+              <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: var(--accent-cyan);">
+                <i class="fa-solid fa-dna"></i> Technical DNA & Strengths
+              </h4>
+              
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
+                    <span>Embedded Hardware & IoT Prototyping</span>
+                    <span style="color: var(--accent-cyan);">90%</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
+                    <span>Python Scripting & System Automation</span>
+                    <span style="color: var(--accent-cyan);">92%</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
+                    <span>C Programming & Memory Structures</span>
+                    <span style="color: var(--accent-cyan);">85%</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
+                    <span>Conference Presentation & Technical Research</span>
+                    <span style="color: var(--accent-cyan);">95%</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 95%;"></div></div>
+                </div>
+              </div>
+
+              <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Verified against academic resume records</span>
+                <span class="badge badge-emerald"><i class="fa-solid fa-shield-check"></i> High Integrity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ACADEMIC EXCELLENCE & EDUCATION TIMELINE
+         ==================================================================== -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill"><i class="fa-solid fa-graduation-cap"></i> Academic Trajectory</span>
+          <h2 class="section-title">Educational Foundation</h2>
+          <p class="section-subtitle">
+            Consistent top-tier academic performance across high school, intermediate, and engineering graduation.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- B.Tech ECE -->
+          <div class="edu-card featured">
+            <span class="badge badge-cyan edu-badge-top">
+              <i class="fa-solid fa-award"></i> University Topper Pace
+            </span>
+            <div>
+              <div class="edu-header">
+                <div class="edu-icon-wrap">
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div class="edu-title-group">
+                  <h3>B.Tech in ECE</h3>
+                  <div class="edu-institution">Sri Venkateswara College of Engineering</div>
+                </div>
+              </div>
+
+              <div class="edu-score-box">
+                <span class="score-label">Graduation CGPA</span>
+                <span class="score-value">9.59 / 10.0</span>
+              </div>
+
+              <p class="edu-details">
+                Electronics and Communication Engineering. Specializing in IoT architecture, embedded microcontrollers, signal processing, and communication networks.
+              </p>
+            </div>
+
+            <div>
+              <div class="edu-tags">
+                <span class="edu-tag">Embedded Systems</span>
+                <span class="edu-tag">Microcontrollers</span>
+                <span class="edu-tag">IoT</span>
+                <span class="edu-tag">MATLAB</span>
+                <span class="edu-tag">Python & C</span>
+              </div>
+              <div style="margin-top: 1rem; font-size: 0.78rem; color: var(--accent-cyan); font-weight: 700;">
+                <i class="fa-solid fa-calendar-days"></i> 2023 - 2027 (Final Year)
+              </div>
+            </div>
+          </div>
+
+          <!-- Intermediate MPC -->
+          <div class="edu-card">
+            <div>
+              <div class="edu-header">
+                <div class="edu-icon-wrap" style="color: var(--accent-emerald); background: rgba(16, 185, 129, 0.12);">
+                  <i class="fa-solid fa-school"></i>
+                </div>
+                <div class="edu-title-group">
+                  <h3>Intermediate (MPC)</h3>
+                  <div class="edu-institution">Sri Chaitanya Junior College</div>
+                </div>
+              </div>
+
+              <div class="edu-score-box">
+                <span class="score-label">Board Percentage</span>
+                <span class="score-value" style="color: var(--accent-emerald);">92.4%</span>
+              </div>
+
+              <p class="edu-details">
+                Core curriculum in Mathematics, Physics, and Chemistry (MPC). Developed deep analytical problem-solving foundation and mathematical modeling skills.
+              </p>
+            </div>
+
+            <div>
+              <div class="edu-tags">
+                <span class="edu-tag">Mathematics</span>
+                <span class="edu-tag">Physics</span>
+                <span class="edu-tag">Chemistry</span>
+                <span class="edu-tag">Analytical Logic</span>
+              </div>
+              <div style="margin-top: 1rem; font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">
+                <i class="fa-solid fa-calendar-days"></i> 2021 - 2023
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary School (SSC) -->
+          <div class="edu-card">
+            <div>
+              <div class="edu-header">
+                <div class="edu-icon-wrap" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="edu-title-group">
+                  <h3>Secondary School (SSC)</h3>
+                  <div class="edu-institution">St. Arnold's High School</div>
+                </div>
+              </div>
+
+              <div class="edu-score-box">
+                <span class="score-label">SSC Board Result</span>
+                <span class="score-value" style="color: var(--accent-amber);">98.3%</span>
+              </div>
+
+              <p class="edu-details">
+                Distinction score across all academic subjects with special emphasis on mathematics, physical sciences, and English communication.
+              </p>
+            </div>
+
+            <div>
+              <div class="edu-tags">
+                <span class="edu-tag">Science & Math</span>
+                <span class="edu-tag">Communication</span>
+                <span class="edu-tag">Top Honors</span>
+              </div>
+              <div style="margin-top: 1rem; font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">
+                <i class="fa-solid fa-calendar-days"></i> 2020 - 2021
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SKILLS & CORE COMPETENCIES MATRIX
+         ==================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill"><i class="fa-solid fa-layer-group"></i> Technical Inventory</span>
+          <h2 class="section-title">Skills & Core Competencies</h2>
+          <p class="section-subtitle">
+            A comprehensive matrix of programming languages, hardware prototyping stacks, industry tools, and professional strengths.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <!-- Filter Tabs -->
+          <div class="skills-filter-tabs">
+            <button class="filter-tab active" data-filter="all">All Competencies</button>
+            <button class="filter-tab" data-filter="hardware">Hardware & IoT</button>
+            <button class="filter-tab" data-filter="languages">Programming & C</button>
+            <button class="filter-tab" data-filter="tools">Tools & Platforms</button>
+            <button class="filter-tab" data-filter="soft">Professional & Analytical</button>
+          </div>
+
+          <!-- Skills Cards Grid -->
+          <div class="skills-grid">
+            
+            <!-- Category: Programming Languages -->
+            <div class="skill-category-card" data-category="languages">
+              <div class="category-header">
+                <div class="category-icon"><i class="fa-brands fa-python"></i></div>
+                <div>
+                  <h3>Languages & Software</h3>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Core development languages</span>
+                </div>
+              </div>
+
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="fa-brands fa-python" style="color: #38bdf8;"></i> Python</span>
+                    <span class="skill-level-tag">Advanced Essentials</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name"><i class="fa-solid fa-c" style="color: #60a5fa;"></i> C Programming</span>
+                    <span class="skill-level-tag">Data Structures & Microcontroller Code</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+                </div>
+              </div>
+
+              <div class="skill-chips-row">
+                <span class="skill-chip"><i class="fa-solid fa-code"></i> OOP Concepts</span>
+                <span class="skill-chip"><i class="fa-solid fa-bolt"></i> PySerial</span>
+                <span class="skill-chip"><i class="fa-solid fa-microchip"></i> Embedded C</span>
+              </div>
+            </div>
+
+            <!-- Category: Hardware & IoT -->
+            <div class="skill-category-card" data-category="hardware">
+              <div class="category-header">
+                <div class="category-icon" style="color: var(--accent-emerald); background: rgba(16, 185, 129, 0.12);">
+                  <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div>
+                  <h3>Hardware & IoT Systems</h3>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Physical computing & interfacing</span>
+                </div>
+              </div>
+
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">ESP32 & Arduino</span>
+                    <span class="skill-level-tag" style="color: var(--accent-emerald);">Hands-on Prototyping</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 88%; background: var(--gradient-accent);"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">GPIO Interfacing & Sensors</span>
+                    <span class="skill-level-tag" style="color: var(--accent-emerald);">Soil Moisture, Relays, ADC</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 92%; background: var(--gradient-accent);"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Embedded Systems (Basics)</span>
+                    <span class="skill-level-tag" style="color: var(--accent-emerald);">Timers, Interrupts, Serial</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 82%; background: var(--gradient-accent);"></div></div>
+                </div>
+              </div>
+
+              <div class="skill-chips-row">
+                <span class="skill-chip"><i class="fa-solid fa-wifi"></i> IoT Architecture</span>
+                <span class="skill-chip"><i class="fa-solid fa-toggle-on"></i> Relay Modules</span>
+                <span class="skill-chip"><i class="fa-solid fa-faucet"></i> Actuators</span>
+              </div>
+            </div>
+
+            <!-- Category: Tools & Platforms -->
+            <div class="skill-category-card" data-category="tools">
+              <div class="category-header">
+                <div class="category-icon" style="color: var(--accent-purple); background: rgba(168, 85, 247, 0.12);">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                <div>
+                  <h3>Tools & Platforms</h3>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Engineering toolchains</span>
+                </div>
+              </div>
+
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">MATLAB (Basics)</span>
+                    <span class="skill-level-tag" style="color: var(--accent-purple);">Signal Analysis</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 80%; background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">CAD to 3D Printing (NIELIT)</span>
+                    <span class="skill-level-tag" style="color: var(--accent-purple);">Certified Prototyping</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 85%; background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Google Maps & Drone GIS</span>
+                    <span class="skill-level-tag" style="color: var(--accent-purple);">Spatial Analysis</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 88%; background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);"></div></div>
+                </div>
+              </div>
+
+              <div class="skill-chips-row">
+                <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git Version Control</span>
+                <span class="skill-chip"><i class="fa-solid fa-cube"></i> NIELIT Calicut</span>
+                <span class="skill-chip"><i class="fa-solid fa-brain"></i> AI for Beginners</span>
+              </div>
+            </div>
+
+            <!-- Category: Soft Skills & Analytical -->
+            <div class="skill-category-card" data-category="soft">
+              <div class="category-header">
+                <div class="category-icon" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">
+                  <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <div>
+                  <h3>Professional & Analytical</h3>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Workplace & leadership qualities</span>
+                </div>
+              </div>
+
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Accuracy & Attention to Detail</span>
+                    <span class="skill-level-tag" style="color: var(--accent-amber);">High Precision</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 98%; background: var(--gradient-gold);"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Public Speaking & Presentations</span>
+                    <span class="skill-level-tag" style="color: var(--accent-amber);">Conference Presenter</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 94%; background: var(--gradient-gold);"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Analytical Thinking & Problem Solving</span>
+                    <span class="skill-level-tag" style="color: var(--accent-amber);">Algorithmic Logic</span>
+                  </div>
+                  <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 92%; background: var(--gradient-gold);"></div></div>
+                </div>
+              </div>
+
+              <div class="skill-chips-row">
+                <span class="skill-chip"><i class="fa-solid fa-clock"></i> Time Management</span>
+                <span class="skill-chip"><i class="fa-solid fa-person-chalkboard"></i> Tech Exploration</span>
+                <span class="skill-chip"><i class="fa-solid fa-user-check"></i> Independent Execution</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURED PROJECTS SECTION
+         ==================================================================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill"><i class="fa-solid fa-laptop-code"></i> Engineering Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Physical hardware systems, microcontroller automation, and soft computing research implementations.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Multi-LED Control using ESP32 and Python -->
+          <div class="project-card">
+            <div class="project-visual-header">
+              <span class="badge badge-cyan project-badge-corner">
+                <i class="fa-solid fa-microchip"></i> Hardware Mini-Project
+              </span>
+              <span class="badge badge-emerald project-badge-status">
+                <i class="fa-solid fa-circle-check"></i> Verified Hardware Test
+              </span>
+              <i class="fa-solid fa-network-wired project-icon-center"></i>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Multi-LED Control using ESP32 and Python</h3>
+              
+              <p class="project-description">
+                Engineered an IoT mini project establishing serial and wireless communication between a Python control script and an ESP32 microcontroller to execute GPIO pin state transitions and sequence logic in real time.
+              </p>
+
+              <div class="project-metrics">
+                <div class="metric-box">
+                  <span class="metric-val">&lt; 50 ms</span>
+                  <span class="metric-lbl">Control Latency</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-val">4 Pins</span>
+                  <span class="metric-lbl">GPIO Multiplexing</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">ESP32</span>
+                <span class="project-tag">GPIO Interfacing</span>
+                <span class="project-tag">Embedded Systems</span>
+                <span class="project-tag">IoT</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="#lab" class="btn-interactive-demo">
+                  <i class="fa-solid fa-play"></i> Live Simulator in Lab
+                </a>
+                <span style="font-size: 0.75rem; color: var(--text-muted);"><i class="fa-solid fa-code-commit"></i> Real-Time Tested</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Automatic Plant Watering System -->
+          <div class="project-card">
+            <div class="project-visual-header">
+              <span class="badge badge-emerald project-badge-corner">
+                <i class="fa-solid fa-leaf"></i> Agri-Tech Automation
+              </span>
+              <span class="badge badge-cyan project-badge-status">
+                <i class="fa-solid fa-circle-nodes"></i> Closed-Loop System
+              </span>
+              <i class="fa-solid fa-droplet project-icon-center" style="color: #10b981;"></i>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Automatic Plant Watering System</h3>
+              
+              <p class="project-description">
+                Developed an autonomous irrigation control system using analog soil moisture sensing, a microcontroller, a 5V relay module, and a DC submersible pump to maintain optimal root zone hydration while minimizing water loss.
+              </p>
+
+              <div class="project-metrics">
+                <div class="metric-box">
+                  <span class="metric-val">~40%</span>
+                  <span class="metric-lbl">Water Conserved</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-val">100%</span>
+                  <span class="metric-lbl">Automated Control</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-tag">Microcontroller</span>
+                <span class="project-tag">Soil Moisture Sensor</span>
+                <span class="project-tag">Relay Module</span>
+                <span class="project-tag">DC Pump</span>
+                <span class="project-tag">Threshold Logic</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="#lab" class="btn-interactive-demo">
+                  <i class="fa-solid fa-sliders"></i> Test Moisture Slider
+                </a>
+                <span style="font-size: 0.75rem; color: var(--text-muted);"><i class="fa-solid fa-check"></i> Hysteresis Logic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: AI-Based Face Recognition System -->
+          <div class="project-card">
+            <div class="project-visual-header">
+              <span class="badge badge-purple project-badge-corner">
+                <i class="fa-solid fa-brain"></i> National Conference Paper
+              </span>
+              <span class="badge badge-gold project-badge-status">
+                <i class="fa-solid fa-scroll"></i> NCA SCTE-2026
+              </span>
+              <i class="fa-solid fa-id-badge project-icon-center" style="color: #c084fc;"></i>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">AI-Based Face Recognition System</h3>
+              
+              <p class="project-description">
+                Researched and presented a soft-computing biometric authentication pipeline at the 5th National Conference on Applications of Soft Computing Techniques in Engineering (ACE College, Hyderabad), optimizing feature detection under varying ambient illumination.
+              </p>
+
+              <div class="project-metrics">
+                <div class="metric-box">
+                  <span class="metric-val">94%+</span>
+                  <span class="metric-lbl">Verification Accuracy</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-val">Live Video</span>
+                  <span class="metric-lbl">Frame Extraction</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Soft Computing</span>
+                <span class="project-tag">Face Recognition</span>
+                <span class="project-tag">Computer Vision</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="#research" class="btn-interactive-demo" style="border-color: #a855f7; color: #c084fc;">
+                  <i class="fa-solid fa-book-open"></i> View Conference Paper
+                </a>
+                <span style="font-size: 0.75rem; color: var(--text-muted);"><i class="fa-solid fa-microphone"></i> Paper Presented</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Water Resources Protection via Drone GIS -->
+          <div class="project-card">
+            <div class="project-visual-header">
+              <span class="badge badge-cyan project-badge-corner">
+                <i class="fa-solid fa-satellite"></i> Geospatial Research
+              </span>
+              <span class="badge badge-emerald project-badge-status">
+                <i class="fa-solid fa-stamp"></i> IETE Published
+              </span>
+              <i class="fa-solid fa-drone project-icon-center" style="color: #38bdf8;"></i>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Water Resources Protection via Drones & Google Maps</h3>
+              
+              <p class="project-description">
+                Published research paper analyzing aerial drone telemetry combined with Google Maps satellite GIS APIs to monitor, survey, and detect illegal shoreline encroachment on municipal water bodies and reservoirs.
+              </p>
+
+              <div class="project-metrics">
+                <div class="metric-box">
+                  <span class="metric-val">GIS Mapping</span>
+                  <span class="metric-lbl">Multi-temporal Layers</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-val">Zero-Contact</span>
+                  <span class="metric-lbl">Aerial Surveillance</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-tag">Drone Technology</span>
+                <span class="project-tag">Google Maps API</span>
+                <span class="project-tag">IETE Publication</span>
+                <span class="project-tag">Spatial GIS</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="#research" class="btn-interactive-demo">
+                  <i class="fa-solid fa-file-lines"></i> View Publication
+                </a>
+                <span style="font-size: 0.75rem; color: var(--text-muted);"><i class="fa-solid fa-trophy"></i> Certified Author</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         INTERACTIVE ENGINEERING LAB / LIVE SIMULATORS
+         ==================================================================== -->
+    <section id="lab" class="section lab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill"><i class="fa-solid fa-flask-vial"></i> Recruiter Interactive Proof of Work</span>
+          <h2 class="section-title">Live Hardware Simulators</h2>
+          <p class="section-subtitle">
+            Interact with simulated physical prototypes developed by Lakshmi: toggle virtual ESP32 GPIOs and test closed-loop soil moisture threshold logic in real time.
+          </p>
+        </div>
+
+        <div class="simulators-wrapper">
+          
+          <!-- Simulator 1: ESP32 Multi-LED Controller -->
+          <div class="simulator-box">
+            <div class="sim-header">
+              <div class="sim-title">
+                <i class="fa-solid fa-microchip" style="color: var(--accent-cyan);"></i>
+                <span>ESP32 GPIO Hardware Controller (Python Bridge)</span>
+              </div>
+              <div class="sim-status">
+                <span class="badge-pulse"></span>
+                <span>CHIP ONLINE</span>
+              </div>
+            </div>
+
+            <div class="sim-body">
+              <div class="esp32-board">
+                <div class="esp32-chip">
+                  <i class="fa-solid fa-cpu"></i> ESP-WROOM-32 • DUAL CORE XTENSA • 240MHz
+                </div>
+
+                <div class="led-matrix">
+                  <div class="led-channel">
+                    <div class="led-bulb" id="led-pin-2" title="GPIO 2 - Red LED"></div>
+                    <span class="led-pin">GPIO 2 (Red)</span>
+                    <button class="sim-btn" onclick="toggleLED(2)">Toggle</button>
+                  </div>
+
+                  <div class="led-channel">
+                    <div class="led-bulb" id="led-pin-4" title="GPIO 4 - Blue LED"></div>
+                    <span class="led-pin">GPIO 4 (Blue)</span>
+                    <button class="sim-btn" onclick="toggleLED(4)">Toggle</button>
+                  </div>
+
+                  <div class="led-channel">
+                    <div class="led-bulb" id="led-pin-16" title="GPIO 16 - Green LED"></div>
+                    <span class="led-pin">GPIO 16 (Grn)</span>
+                    <button class="sim-btn" onclick="toggleLED(16)">Toggle</button>
+                  </div>
+
+                  <div class="led-channel">
+                    <div class="led-bulb" id="led-pin-17" title="GPIO 17 - Amber LED"></div>
+                    <span class="led-pin">GPIO 17 (Amb)</span>
+                    <button class="sim-btn" onclick="toggleLED(17)">Toggle</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="esp-controls">
+                <button class="sim-btn" onclick="setAllLEDs(true)">
+                  <i class="fa-solid fa-sun"></i> All High (ON)
+                </button>
+                <button class="sim-btn" onclick="setAllLEDs(false)">
+                  <i class="fa-solid fa-moon"></i> All Low (OFF)
+                </button>
+                <button class="sim-btn" onclick="startWavePattern()">
+                  <i class="fa-solid fa-wave-square"></i> Running Wave Mode
+                </button>
+                <button class="sim-btn" onclick="stopWavePattern()">
+                  <i class="fa-solid fa-stop"></i> Stop Loop
+                </button>
+              </div>
+
+              <div>
+                <span style="font-size: 0.75rem; color: #94a3b8; font-family: var(--font-mono); display: block; margin-bottom: 0.25rem;">
+                  <i class="fa-solid fa-terminal"></i> Virtual Serial Monitor (COM3 @ 115200 Baud):
+                </span>
+                <div class="sim-console" id="esp32-console">
+                  <div style="color: #38bdf8;">[BOOT] ESP32 Ready. Serial initialized at 115200 baud rate.</div>
+                  <div style="color: #94a3b8;">[INIT] Python PySerial connection established. Waiting for command...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulator 2: Automatic Plant Watering Closed-Loop System -->
+          <div class="simulator-box">
+            <div class="sim-header">
+              <div class="sim-title">
+                <i class="fa-solid fa-droplet" style="color: var(--accent-emerald);"></i>
+                <span>Automatic Plant Watering & Irrigation Feedback</span>
+              </div>
+              <div class="sim-status">
+                <span id="pump-status-badge" class="badge badge-cyan">
+                  <i class="fa-solid fa-circle-check"></i> MOISTURE OPTIMAL (STANDBY)
+                </span>
+              </div>
+            </div>
+
+            <div class="sim-body">
+              <div class="plant-sim-graphic">
+                <div class="soil-gauge-container">
+                  <div class="moisture-dial" id="moisture-dial">
+                    <span id="moisture-val-display">55%</span>
+                    <span style="font-size: 0.65rem; color: #94a3b8; font-weight: 500;">MOISTURE</span>
+                  </div>
+                  <span id="adc-raw-display" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan);">
+                    ADC Raw: 2555 | 1.82V
+                  </span>
+                </div>
+
+                <div class="pump-status-indicator">
+                  <div class="pump-motor-icon" id="pump-motor-icon">
+                    <i class="fa-solid fa-gear"></i>
+                  </div>
+                  <span style="font-size: 0.8rem; font-weight: 700; color: #cbd5e1;">5V Submersible Pump</span>
+                  <span style="font-size: 0.72rem; color: #94a3b8;">Relay Threshold: &lt; 35%</span>
+                </div>
+              </div>
+
+              <!-- Interactive Slider -->
+              <div class="slider-container">
+                <div class="slider-label">
+                  <span><i class="fa-solid fa-gauge-high"></i> Drag Soil Moisture Sensor Level:</span>
+                  <span style="color: var(--accent-cyan); font-weight: 700;">Simulated Resistance</span>
+                </div>
+                <input type="range" min="5" max="95" value="55" class="range-slider" id="moisture-slider">
+                <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: #64748b; font-family: var(--font-mono);">
+                  <span>0% (Parched Soil - Pump ON)</span>
+                  <span>Threshold (35%)</span>
+                  <span>100% (Saturated Soil - Pump OFF)</span>
+                </div>
+              </div>
+
+              <!-- Quick Simulation Presets -->
+              <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                <button class="sim-btn" onclick="simulateDroughtEvent()">
+                  <i class="fa-solid fa-sun" style="color: #ef4444;"></i> Simulate Drought (&lt;35% Trigger)
+                </button>
+                <button class="sim-btn" onclick="simulateRainEvent()">
+                  <i class="fa-solid fa-cloud-rain" style="color: #38bdf8;"></i> Simulate Rain (85%)
+                </button>
+              </div>
+
+              <div style="background: #070b13; border: 1px solid #1e293b; border-radius: var(--radius-md); padding: 0.85rem; font-size: 0.78rem; color: #94a3b8; line-height: 1.5;">
+                <strong style="color: var(--accent-emerald);">System Logic:</strong> Analog voltage from resistive soil sensor is sampled by the ADC channel. When moisture drops below 35%, the microcontroller triggers the optocoupler relay to activate the 5V water pump until target threshold is restored.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         RESEARCH & PUBLICATIONS
+         ==================================================================== -->
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill"><i class="fa-solid fa-book-bookmark"></i> Academic Research</span>
+          <h2 class="section-title">Publications & Conference Presentations</h2>
+          <p class="section-subtitle">
+            Demonstrating research discipline, peer-reviewed engineering methodology, and technical oratory skills.
+          </p>
+        </div>
+
+        <div class="publications-grid">
+          
+          <!-- Publication 1 -->
+          <div class="pub-card">
+            <div>
+              <span class="pub-type-badge">
+                <i class="fa-solid fa-scroll"></i> National Conference Paper Presentation
+              </span>
+
+              <h3 class="pub-title">
+                AI-Based Face Recognition System
+              </h3>
+
+              <div class="pub-venue">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>5th National Conference on Applications of Soft Computing Techniques in Engineering (NCA SCTE-2026)</strong>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">
+                    Held at ACE Engineering College, Hyderabad.
+                  </div>
+                </div>
+              </div>
+
+              <p class="pub-abstract">
+                Authored and presented a peer-reviewed research study analyzing machine learning feature descriptors and soft computing algorithms to create a robust facial recognition pipeline resilient against ambient illumination changes and partial occlusion.
+              </p>
+
+              <div class="pub-key-contributions">
+                <div class="contribution-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Evaluated feature extraction accuracy in low-light environments</span>
+                </div>
+                <div class="contribution-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Synthesized algorithmic trade-offs between computation cost and latency</span>
+                </div>
+                <div class="contribution-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Defended technical findings before academic jury and industry delegates</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pub-footer">
+              <span class="badge badge-purple"><i class="fa-solid fa-microphone"></i> Paper Presented</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">NCA SCTE-2026</span>
+            </div>
+          </div>
+
+          <!-- Publication 2 -->
+          <div class="pub-card">
+            <div>
+              <span class="pub-type-badge">
+                <i class="fa-solid fa-certificate"></i> Research Publication & Certificate
+              </span>
+
+              <h3 class="pub-title">
+                Water Resources Protection from Encroachment using Google Maps and Drone Technology
+              </h3>
+
+              <div class="pub-venue">
+                <i class="fa-solid fa-building-circle-check"></i>
+                <div>
+                  <strong>Institution of Electronics and Telecommunication Engineers (IETE)</strong>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">
+                    Organized by IETE Vijayawada Centre in association with PVPSIT.
+                  </div>
+                </div>
+              </div>
+
+              <p class="pub-abstract">
+                Grabbed a participation certificate for publishing a comprehensive research study proposing a multi-tier surveillance model combining high-resolution drone photography with Google Maps GIS spatial overlays to protect regional water bodies from illegal human encroachment.
+              </p>
+
+              <div class="pub-key-contributions">
+                <div class="contribution-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Aerial drone flight path optimization for reservoir perimeter mapping</span>
+                </div>
+                <div class="contribution-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Geospatial temporal boundary comparison using satellite imagery</span>
+                </div>
+                <div class="contribution-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Public interest engineering application for water resource conservation</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pub-footer">
+              <span class="badge badge-cyan"><i class="fa-solid fa-award"></i> IETE Certified</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">IETE / PVPSIT</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         HONORS, CERTIFICATIONS & INTERNSHIPS
+         ==================================================================== -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill"><i class="fa-solid fa-award"></i> Recognition</span>
+          <h2 class="section-title">Honors & Certifications</h2>
+          <p class="section-subtitle">
+            External credentials, specialized technical bootcamps, and state/regional honors.
+          </p>
+        </div>
+
+        <!-- Best Student Award Spotlight -->
+        <div class="awards-spotlight">
+          <div class="award-trophy-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="award-info">
+            <span class="badge badge-gold" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-star"></i> State / Regional Distinction
+            </span>
+            <h3>Best Student Award — Sri Venkateswara Pratibha Purashkar</h3>
+            <p>
+              Awarded by <strong>ABVP in 2025</strong> in recognition of outstanding academic consistency, active technical research participation, and exemplary leadership in collegiate engineering.
+            </p>
+          </div>
+          <div>
+            <span class="badge badge-gold" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+              <i class="fa-solid fa-medal"></i> Recipient 2025
+            </span>
+          </div>
+        </div>
+
+        <!-- Certifications & Internships Grid -->
+        <div class="certs-grid">
+          
+          <!-- Cert 1: AI/ML 120-Hr Internship -->
+          <div class="cert-card">
+            <div>
+              <div class="cert-issuer-badge">
+                <div class="issuer-logo-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.12);">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <div class="issuer-name">APSCHE & SmartBridge</div>
+              </div>
+
+              <h4 class="cert-title">Short-Term Virtual Internship in AI & ML</h4>
+              
+              <p class="cert-description">
+                Intensive 2-month (120 Hours) practical internship organized by SmartBridge Educational Services in collaboration with the Andhra Pradesh State Council of Higher Education (APSCHE). Covered end-to-end ML model workflows and predictive data analysis.
+              </p>
+            </div>
+
+            <div class="cert-footer">
+              <span><i class="fa-solid fa-clock"></i> 120 Hours / 2 Months</span>
+              <span class="badge badge-emerald">Govt. Endorsed</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: Python Essentials -->
+          <div class="cert-card">
+            <div>
+              <div class="cert-issuer-badge">
+                <div class="issuer-logo-icon" style="color: #0284c7; background: rgba(2, 132, 199, 0.12);">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="issuer-name">LinkedIn Learning</div>
+              </div>
+
+              <h4 class="cert-title">Python Essentials</h4>
+              
+              <p class="cert-description">
+                Comprehensive training covering core Python syntax, object-oriented concepts, exception handling, data structures, and automation scripting essentials.
+              </p>
+            </div>
+
+            <div class="cert-footer">
+              <span><i class="fa-solid fa-circle-check"></i> Industry Standard</span>
+              <span class="badge badge-cyan">Certified</span>
+            </div>
+          </div>
+
+          <!-- Cert 3: AI for Beginners -->
+          <div class="cert-card">
+            <div>
+              <div class="cert-issuer-badge">
+                <div class="issuer-logo-icon" style="color: #3b82f6; background: rgba(59, 130, 246, 0.12);">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="issuer-name">HP LIFE</div>
+              </div>
+
+              <h4 class="cert-title">AI for Beginners</h4>
+              
+              <p class="cert-description">
+                Explored machine intelligence foundations, ethical dimensions of artificial intelligence, real-world industry case studies, and automated decision-making systems.
+              </p>
+            </div>
+
+            <div class="cert-footer">
+              <span><i class="fa-solid fa-award"></i> Global Program</span>
+              <span class="badge badge-cyan">Certified</span>
+            </div>
+          </div>
+
+          <!-- Cert 4: CAD Designs to 3D Printing -->
+          <div class="cert-card">
+            <div>
+              <div class="cert-issuer-badge">
+                <div class="issuer-logo-icon" style="color: #a855f7; background: rgba(168, 85, 247, 0.12);">
+                  <i class="fa-solid fa-cube"></i>
+                </div>
+                <div class="issuer-name">NIELIT, Calicut</div>
+              </div>
+
+              <h4 class="cert-title">CAD Designs to 3D Printing Bootcamp</h4>
+              
+              <p class="cert-description">
+                Government of India autonomous scientific society bootcamp covering 3D parametric CAD modeling, slicing algorithms, rapid prototyping techniques, and additive manufacturing.
+              </p>
+            </div>
+
+            <div class="cert-footer">
+              <span><i class="fa-solid fa-building-shield"></i> MeitY, Govt. of India</span>
+              <span class="badge badge-purple">Bootcamp</span>
+            </div>
+          </div>
+
+          <!-- Cert 5: Designing of IoT -->
+          <div class="cert-card">
+            <div>
+              <div class="cert-issuer-badge">
+                <div class="issuer-logo-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.12);">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="issuer-name">S.V. University, Tirupati</div>
+              </div>
+
+              <h4 class="cert-title">Designing of IoT</h4>
+              
+              <p class="cert-description">
+                Comprehensive training by premier state university on Internet of Things architectures, embedded sensor network deployment, microcontroller interfacing, and cloud telemetry protocols.
+              </p>
+            </div>
+
+            <div class="cert-footer">
+              <span><i class="fa-solid fa-building-columns"></i> State University</span>
+              <span class="badge badge-gold">Certified</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         INTERACTIVE RECRUITER CLI TERMINAL
+         ==================================================================== -->
+    <section id="terminal-section" class="section cli-section">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-pill"><i class="fa-solid fa-terminal"></i> Interactive Shell</span>
+          <h2 class="section-title">ECE Developer CLI</h2>
+          <p class="section-subtitle">
+            Prefer a keyboard-first terminal experience? Type commands below to query candidate metadata, run test queries, or launch quick actions.
+          </p>
+        </div>
+
+        <div class="cli-container">
+          <div class="cli-header">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <div class="terminal-dots">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #94a3b8;">
+                thanmai@ece-svce:~$ (Antigravity Embedded Shell v2.4)
+              </span>
+            </div>
+            <span class="badge badge-cyan" style="font-size: 0.7rem;">Interactive Mode</span>
+          </div>
+
+          <div class="cli-screen">
+            <div class="cli-output-log" id="cli-output-log">
+              <div style="color: #38bdf8;">Welcome to N. Lakshmi Thanmai's Interactive Recruiter Terminal.</div>
+              <div style="color: #64748b;">Type <strong style="color: #34d399;">help</strong> to see available commands or click the shortcut chips below.</div>
+              <div style="margin-top: 0.4rem; color: #94a3b8;">• B.Tech ECE (SVCE) | CGPA: 9.59 | Batch: 2027</div>
+            </div>
+
+            <div class="cli-input-row">
+              <span class="cli-prompt-label">thanmai@ece-svce:~$</span>
+              <input type="text" class="cli-input" id="cli-input" placeholder="Type 'help', 'about', 'cgpa', 'projects', 'resume'..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+
+          <div class="cli-helper-chips">
+            <span style="font-size: 0.72rem; color: #64748b; align-self: center; font-family: var(--font-mono);">Click to run:</span>
+            <button class="cli-chip" onclick="runCLICommand('about')">about</button>
+            <button class="cli-chip" onclick="runCLICommand('cgpa')">cgpa</button>
+            <button class="cli-chip" onclick="runCLICommand('skills')">skills</button>
+            <button class="cli-chip" onclick="runCLICommand('projects')">projects</button>
+            <button class="cli-chip" onclick="runCLICommand('research')">research</button>
+            <button class="cli-chip" onclick="runCLICommand('awards')">awards</button>
+            <button class="cli-chip" onclick="runCLICommand('contact')">contact</button>
+            <button class="cli-chip" onclick="runCLICommand('resume')">resume</button>
+            <button class="cli-chip" onclick="runCLICommand('clear')">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT & RECRUITMENT INQUIRY
+         ==================================================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+          <h2 class="section-title">Let's Connect for 2027 Placements</h2>
+          <p class="section-subtitle">
+            Open to campus recruitment opportunities, technical interview schedules, and engineering internships.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Card -->
+          <div class="contact-info-card">
+            <div>
+              <span class="badge badge-emerald" style="margin-bottom: 0.75rem;">
+                <i class="fa-solid fa-circle-check"></i> Actively Responding
+              </span>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Contact Information</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                Feel free to reach out directly via email, phone, or LinkedIn. Looking forward to discussing how my skills in embedded IoT, Python, and engineering can add value to your organization.
+              </p>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Email Address</h4>
+                <a href="mailto:nlakshmithanmai@gmail.com">nlakshmithanmai@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon" style="color: var(--accent-emerald); background: rgba(16, 185, 129, 0.12);">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Phone / WhatsApp</h4>
+                <a href="tel:+919618476903">+91 9618476903</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon" style="color: #0284c7; background: rgba(2, 132, 199, 0.12);">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>LinkedIn Profile</h4>
+                <a href="https://linkedin.com/in/lakshmi" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/lakshmi <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Location & Placement Preference</h4>
+                <p>Andhra Pradesh, India (Ready to Relocate Pan-India)</p>
+              </div>
+            </div>
+
+            <div style="padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button class="btn btn-secondary" onclick="openResumeModal()" style="flex: 1;">
+                <i class="fa-solid fa-file-invoice"></i> View ATS Resume
+              </button>
+              <a href="Nerella Lakshmi Thanmai.pdf" download="Nerella_Lakshmi_Thanmai_Resume.pdf" class="btn btn-primary" style="flex: 1;">
+                <i class="fa-solid fa-file-arrow-down"></i> Original PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- Recruiter Inquiry Form -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.4rem;">Send a Recruitment Invitation</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+              Fill out this quick form to automatically initiate an email discussion with Lakshmi.
+            </p>
+
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="recruiter-name">Your Name *</label>
+                  <input type="text" id="recruiter-name" class="form-input" placeholder="e.g. John Doe / HR Lead" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="recruiter-company">Company / Organization *</label>
+                  <input type="text" id="recruiter-company" class="form-input" placeholder="e.g. Intel, Qualcomm, Cisco..." required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="recruiter-email">Work Email *</label>
+                  <input type="email" id="recruiter-email" class="form-input" placeholder="recruiter@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="recruiter-role">Target Role</label>
+                  <input type="text" id="recruiter-role" class="form-input" placeholder="e.g. Embedded Engineer, GET, IoT">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="recruiter-msg">Opportunity Details / Message *</label>
+                <textarea id="recruiter-msg" class="form-textarea" rows="4" placeholder="Hello Lakshmi, we would love to invite you for an interview regarding our 2027 graduate campus recruitment drive..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">
+                <i class="fa-solid fa-paper-plane"></i> Send Recruitment Inquiry
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="logo-chip">LT</div>
+            <div>
+              <div style="font-weight: 800; font-size: 1.1rem;">Nerella Lakshmi Thanmai</div>
+              <div style="font-size: 0.78rem; color: var(--accent-cyan);">Electronics & Communication Engineering • 2027 Drive</div>
+            </div>
+          </div>
+
+          <div class="footer-social-links">
+            <a href="mailto:nlakshmithanmai@gmail.com" class="social-circle" title="Email Lakshmi" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+919618476903" class="social-circle" title="Call Lakshmi" aria-label="Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="https://linkedin.com/in/lakshmi" target="_blank" rel="noopener noreferrer" class="social-circle" title="LinkedIn Profile" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#home" class="social-circle" title="Back to Top" aria-label="Back to Top">
+              <i class="fa-solid fa-arrow-up"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            © 2026-2027 N. Lakshmi Thanmai. All rights reserved. Designed for Campus Recruitment 2027.
+          </div>
+          <div style="display: flex; gap: 1rem;">
+            <span>Sri Venkateswara College of Engineering</span>
+            <span>•</span>
+            <span style="color: var(--accent-emerald);">CGPA 9.59/10</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ====================================================================
+       MODAL 1: RECRUITER 60-SECOND SNAPSHOT MODAL
+       ==================================================================== -->
+  <div class="modal-overlay" id="recruiter-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <i class="fa-solid fa-bolt" style="color: var(--accent-cyan); font-size: 1.2rem;"></i>
+          <h3 style="font-size: 1.15rem; font-weight: 800;">Recruiter 60-Second Snapshot & Scorecard</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeRecruiterModal()" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: var(--bg-tertiary); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <div>
+            <div style="font-size: 1.2rem; font-weight: 800;">N. Lakshmi Thanmai</div>
+            <div style="font-size: 0.85rem; color: var(--accent-cyan);">Final-Year B.Tech ECE (2023-2027) • Sri Venkateswara College of Engineering</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 1.4rem; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-mono);">9.59 / 10 CGPA</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">University Rank Contender</div>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Key Candidate Highlights for Hiring Managers
+          </h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald); margin-top: 0.25rem;"></i>
+              <span><strong>Unrivaled Academic Track Record:</strong> 9.59 CGPA in B.Tech ECE, 92.4% in Intermediate MPC, and 98.3% in 10th SSC. Proven discipline and strong grasping power.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald); margin-top: 0.25rem;"></i>
+              <span><strong>Dual Competency (Hardware + Python/C):</strong> Built physical ESP32 multi-LED controller and automatic smart irrigation system with sensors, relays, and Python serial bridge.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald); margin-top: 0.25rem;"></i>
+              <span><strong>National Conference Author:</strong> Presented AI-based face recognition paper at NCA SCTE-2026 (ACE College, Hyderabad) and published on drone GIS with IETE Vijayawada.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald); margin-top: 0.25rem;"></i>
+              <span><strong>Recognized Excellence:</strong> Honored with the Best Student Award (Sri Venkateswara Pratibha Purashkar, ABVP 2025).</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+              <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald); margin-top: 0.25rem;"></i>
+              <span><strong>120-Hr AI/ML Virtual Internship:</strong> Rigorous 2-month training with SmartBridge and Andhra Pradesh State Council of Higher Education (APSCHE).</span>
+            </li>
+          </ul>
+        </div>
+
+        <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 1rem; font-size: 0.85rem; color: #cbd5e1;">
+          <strong>Target Positions:</strong> Embedded Systems Engineer, IoT Firmware Developer, Graduate Engineering Trainee (GET), Software Development Engineer (Python / Backend), Associate AI/ML Engineer.
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+          <button class="btn btn-secondary" onclick="copyRecruiterPitch()">
+            <i class="fa-solid fa-copy"></i> Copy Summary for HR Notes
+          </button>
+          <button class="btn btn-primary" onclick="closeRecruiterModal(); openResumeModal();">
+            <i class="fa-solid fa-file-invoice"></i> View Full Resume
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 2: CLEAN ATS PRINTABLE RESUME VIEWER
+       ==================================================================== -->
+  <div class="modal-overlay" id="resume-modal">
+    <div class="modal-window" style="max-width: 860px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <i class="fa-solid fa-file-invoice" style="color: var(--accent-cyan); font-size: 1.2rem;"></i>
+          <h3 style="font-size: 1.15rem; font-weight: 800;">ATS Curriculum Vitae — N. Lakshmi Thanmai</h3>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="Nerella Lakshmi Thanmai.pdf" download="Nerella_Lakshmi_Thanmai_Resume.pdf" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.82rem;">
+            <i class="fa-solid fa-file-arrow-down"></i> Download Original PDF
+          </a>
+          <button class="btn btn-primary" onclick="printResume()" style="padding: 0.45rem 0.9rem; font-size: 0.82rem;">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+          </button>
+          <button class="modal-close-btn" onclick="closeResumeModal()" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body" style="background: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; line-height: 1.5; border-radius: 0 0 var(--radius-xl) var(--radius-xl);">
+        
+        <!-- Printable Resume Document Container -->
+        <div id="printable-resume-area" style="padding: 1rem 0.5rem;">
+          <!-- Header -->
+          <div style="text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 1rem; margin-bottom: 1.25rem;">
+            <h1 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem;">
+              N LAKSHMI THANMAI
+            </h1>
+            <div style="font-size: 0.9rem; color: #334155; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <span><strong>Email:</strong> nlakshmithanmai@gmail.com</span>
+              <span>•</span>
+              <span><strong>Phone:</strong> 9618476903</span>
+              <span>•</span>
+              <span><strong>LinkedIn:</strong> linkedin.com/in/lakshmi</span>
+              <span>•</span>
+              <span><strong>Location:</strong> Andhra Pradesh, India</span>
+            </div>
+          </div>
+
+          <!-- Career Objective -->
+          <div style="margin-bottom: 1.25rem;">
+            <h2 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; text-transform: uppercase; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+              Career Objective
+            </h2>
+            <p style="font-size: 0.9rem; color: #334155; text-align: justify;">
+              A diligent and detail-oriented final-year B.Tech student in Electronics and Communication Engineering seeking an opportunity through the 2027 campus recruitment drive. Eager to apply analytical thinking, problem-solving, and communication skills, contribute to organizational goals, and learn and grow professionally in a collaborative work environment.
+            </p>
+          </div>
+
+          <!-- Skills -->
+          <div style="margin-bottom: 1.25rem;">
+            <h2 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; text-transform: uppercase; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+              Skills
+            </h2>
+            <div style="font-size: 0.88rem; color: #334155; display: flex; flex-direction: column; gap: 0.35rem;">
+              <div><strong>Languages:</strong> Python, C</div>
+              <div><strong>Tools & Platforms:</strong> MATLAB (Basics), Embedded Systems (Basics), Arduino & ESP32 Ecosystem, IoT Architecture</div>
+              <div><strong>Professional & Soft Skills:</strong> Accuracy and Attention to Detail, Problem Solving, Analytical Thinking, Public Speaking, Strong Verbal & Written Communication, Time Management, Ability to Work Independently, Exploration of New Technologies</div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div style="margin-bottom: 1.25rem;">
+            <h2 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; text-transform: uppercase; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+              Education
+            </h2>
+            
+            <div style="margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.92rem; color: #0f172a;">
+                <span>Sri Venkateswara College of Engineering</span>
+                <span>2023 - 2027</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.88rem; color: #475569;">
+                <span>B.Tech in Electronics and Communication Engineering (ECE)</span>
+                <span><strong>CGPA: 9.59 / 10</strong></span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.92rem; color: #0f172a;">
+                <span>Sri Chaitanya Junior College</span>
+                <span>2021 - 2023</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.88rem; color: #475569;">
+                <span>Intermediate, MPC</span>
+                <span><strong>Percentage: 92.4%</strong></span>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.92rem; color: #0f172a;">
+                <span>St. Arnold's High School</span>
+                <span>2020 - 2021</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.88rem; color: #475569;">
+                <span>Secondary School Certificate (SSC)</span>
+                <span><strong>Percentage: 98.3%</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Work -->
+          <div style="margin-bottom: 1.25rem;">
+            <h2 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; text-transform: uppercase; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+              Project Work
+            </h2>
+            
+            <div style="margin-bottom: 0.75rem;">
+              <div style="font-weight: 700; font-size: 0.92rem; color: #0f172a;">
+                • Multi-LED Control using ESP32 and Python
+              </div>
+              <ul style="margin-left: 1.5rem; font-size: 0.86rem; color: #334155; margin-top: 0.2rem;">
+                <li>Built an IoT mini project to control multiple LEDs using ESP32 and Python.</li>
+                <li>Implemented GPIO interfacing for hardware control and real-time testing.</li>
+                <li><strong>Technologies:</strong> Python, ESP32, Embedded Systems, IoT.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div style="font-weight: 700; font-size: 0.92rem; color: #0f172a;">
+                • Automatic Plant Watering System
+              </div>
+              <ul style="margin-left: 1.5rem; font-size: 0.86rem; color: #334155; margin-top: 0.2rem;">
+                <li>Developed an automated irrigation system using a soil moisture sensor, microcontroller, relay, and water pump.</li>
+                <li>Automatically detects soil moisture levels and turns the water pump ON/OFF based on moisture requirement.</li>
+                <li>Helps reduce water wastage and manual effort while ensuring proper watering of plants.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div style="margin-bottom: 1.25rem;">
+            <h2 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; text-transform: uppercase; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+              Certifications & Internships
+            </h2>
+            <ul style="margin-left: 1.5rem; font-size: 0.86rem; color: #334155; display: flex; flex-direction: column; gap: 0.25rem;">
+              <li><strong>Python Essentials:</strong> By LinkedIn</li>
+              <li><strong>AI for Beginners:</strong> By HP LIFE</li>
+              <li><strong>CAD Designs to 3D Printing Bootcamp:</strong> By NIELIT, Calicut</li>
+              <li><strong>Designing of IoT:</strong> By S.V. University, Tirupati</li>
+              <li><strong>Short-Term Virtual Internship in Artificial Intelligence and Machine Learning (2 months, 120 hours):</strong> Organized by SmartBridge Educational Services Pvt. Ltd. in collaboration with Andhra Pradesh State Council of Higher Education (APSCHE).</li>
+            </ul>
+          </div>
+
+          <!-- Achievements -->
+          <div>
+            <h2 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; text-transform: uppercase; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+              Achievements & Awards
+            </h2>
+            <ul style="margin-left: 1.5rem; font-size: 0.86rem; color: #334155; display: flex; flex-direction: column; gap: 0.25rem;">
+              <li><strong>Bagged Best Student Award:</strong> From Sri Venkateswara Pratibha Purashkar, ABVP 2025.</li>
+              <li><strong>Conference Paper Presentation:</strong> Presented a research paper at the 5th National Conference on Applications of Soft Computing Techniques in Engineering (NCA SCTE-2026), held at ACE Engineering College, Hyderabad, on an <em>AI-based face recognition system</em>.</li>
+              <li><strong>Research Publication Certificate:</strong> Grabbed a participation certificate for publishing research paper on <em>"Water resources protection from encroachment using google maps and drone technology"</em> organized by IETE, Vijayawada Centre in association with PVPSIT.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Alerts Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N. Lakshmi Thanmai | Data Analyst Portfolio</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    /* Custom Scrollbar and Animations */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--background); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
+    .metric-card:hover { transform: translateY(-2px); transition: transform 0.2s ease; }
+    .chart-container { position: relative; width: 100%; }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased min-h-screen p-4 md:p-8 font-sans">
+
+  <div class="max-w-7xl mx-auto space-y-8">
+    
+    <!-- HEADER & HERO BANNER -->
+    <header class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 md:p-8 shadow-sm">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Campus Recruitment 2027 • Data Analyst & BI Showcase
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+            N. Lakshmi Thanmai
+          </h1>
+          <p class="text-base md:text-lg text-[var(--muted-foreground)] max-w-3xl leading-relaxed">
+            Data Analyst & Applied Machine Learning Aspirant with a <strong class="text-[var(--foreground)]">9.59/10 CGPA</strong> in B.Tech ECE at Sri Venkateswara College of Engineering. Experienced in Exploratory Data Analysis (EDA), statistical modeling, Python data science libraries (Pandas, NumPy, Scikit-learn), and translating complex datasets into actionable business intelligence.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 text-xs md:text-sm text-[var(--muted-foreground)] pt-1">
+            <span>📍 Andhra Pradesh, India</span>
+            <span>•</span>
+            <span>✉️ <a href="mailto:nlakshmithanmai@gmail.com" class="text-sky-500 hover:underline">nlakshmithanmai@gmail.com</a></span>
+            <span>•</span>
+            <span>📱 +91 9618476903</span>
+            <span>•</span>
+            <span>🔗 <a href="https://linkedin.com/in/lakshmi" target="_blank" class="text-sky-500 hover:underline">LinkedIn</a></span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto">
+          <a href="#dashboard" class="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-center text-sm transition-colors shadow-sm">
+            📊 View Live EDA Dashboard
+          </a>
+          <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-[var(--content)] border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--sidebar)] font-semibold text-sm transition-colors text-center">
+            📄 Print / Save Resume
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick KPI Counters -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-[var(--border)]">
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+          <div class="text-2xl font-black text-sky-500">9.59 / 10</div>
+          <div class="text-xs text-[var(--muted-foreground)] font-medium mt-1">Academic CGPA (B.Tech)</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+          <div class="text-2xl font-black text-emerald-500">395 Records</div>
+          <div class="text-xs text-[var(--muted-foreground)] font-medium mt-1">Benchmark Student Dataset</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+          <div class="text-2xl font-black text-purple-500">120+ Hours</div>
+          <div class="text-xs text-[var(--muted-foreground)] font-medium mt-1">AI/ML Internship (APSCHE)</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+          <div class="text-2xl font-black text-amber-500">2 Papers</div>
+          <div class="text-xs text-[var(--muted-foreground)] font-medium mt-1">Research Publications (IETE/NCA)</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- LIVE DATA ANALYTICS DASHBOARD (STUDENT PERFORMANCE DATASET) -->
+    <section id="dashboard" class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 md:p-8 shadow-sm space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-500">
+            <span>🔬 Live Analytics Case Study</span>
+          </div>
+          <h2 class="text-2xl font-bold mt-1">Secondary Student Performance & At-Risk Predictors</h2>
+          <p class="text-sm text-[var(--muted-foreground)] mt-1">
+            Exploratory Data Analysis and statistical feature correlation on the 395-student benchmark dataset.
+          </p>
+        </div>
+
+        <!-- Interactive Filters -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-xs text-[var(--muted-foreground)]">Filter by:</span>
+          <select id="filter-gender" onchange="updateDashboard()" class="bg-[var(--background)] border border-[var(--border)] text-[var(--foreground)] text-xs rounded-lg px-3 py-2 outline-none">
+            <option value="all">All Genders</option>
+            <option value="F">Female Students (208)</option>
+            <option value="M">Male Students (187)</option>
+          </select>
+
+          <select id="filter-study" onchange="updateDashboard()" class="bg-[var(--background)] border border-[var(--border)] text-[var(--foreground)] text-xs rounded-lg px-3 py-2 outline-none">
+            <option value="all">All Study Times</option>
+            <option value="1">&lt; 2 hrs/week</option>
+            <option value="2">2 - 5 hrs/week</option>
+            <option value="3">5 - 10 hrs/week</option>
+            <option value="4">&gt; 10 hrs/week</option>
+          </select>
+
+          <select id="filter-internet" onchange="updateDashboard()" class="bg-[var(--background)] border border-[var(--border)] text-[var(--foreground)] text-xs rounded-lg px-3 py-2 outline-none">
+            <option value="all">All Internet Access</option>
+            <option value="yes">Internet at Home</option>
+            <option value="no">No Internet</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Metric Cards (Updated by JavaScript) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] metric-card">
+          <span class="text-xs text-[var(--muted-foreground)] font-medium">Sample Cohort Size</span>
+          <div class="text-2xl font-bold text-[var(--foreground)] mt-1" id="metric-cohort">395</div>
+          <span class="text-xs text-sky-500" id="metric-cohort-pct">100% of dataset</span>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] metric-card">
+          <span class="text-xs text-[var(--muted-foreground)] font-medium">Average Final Grade (G3)</span>
+          <div class="text-2xl font-bold text-emerald-500 mt-1" id="metric-avg-grade">10.42 / 20</div>
+          <span class="text-xs text-[var(--muted-foreground)]" id="metric-passing-rate">Pass Rate: 67.1%</span>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] metric-card">
+          <span class="text-xs text-[var(--muted-foreground)] font-medium">Higher Education Aspiration</span>
+          <div class="text-2xl font-bold text-purple-500 mt-1" id="metric-higher-ed">94.9%</div>
+          <span class="text-xs text-[var(--muted-foreground)]">375/395 students</span>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)] metric-card">
+          <span class="text-xs text-[var(--muted-foreground)] font-medium">Past Academic Failures</span>
+          <div class="text-2xl font-bold text-amber-500 mt-1" id="metric-failures">0.33 avg</div>
+          <span class="text-xs text-[var(--muted-foreground)]">Strongest negative correlation (-0.36)</span>
+        </div>
+      </div>
+
+      <!-- Data Visualizations (Canvas / SVG) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Chart 1: Final Grade Distribution (G3) -->
+        <div class="p-5 rounded-xl bg-[var(--background)] border border-[var(--border)] space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-sm">Grade Distribution (G3 Score: 0 - 20)</h3>
+            <span class="text-xs text-emerald-500 font-medium">Passing Threshold: ≥ 10</span>
+          </div>
+          <div class="h-56 flex items-end gap-1.5 pt-4 pb-2 px-2 border-b border-[var(--border)]" id="grade-bars">
+            <!-- Dynamically populated bars -->
+          </div>
+          <div class="flex justify-between text-xs text-[var(--muted-foreground)] px-2">
+            <span>0 (Fail / Absent)</span>
+            <span>5 (Low)</span>
+            <span>10 (Pass Cutoff)</span>
+            <span>15 (Good)</span>
+            <span>20 (Distinction)</span>
+          </div>
+          <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">
+            💡 <strong>Insight:</strong> 38 students scored 0 (absent/dropout during final exam). Excluding zeros, the average score rises to <strong>11.52/20</strong> with a normal bell curve peaking around 10-12.
+          </p>
+        </div>
+
+        <!-- Chart 2: Key Factor Correlation Matrix -->
+        <div class="p-5 rounded-xl bg-[var(--background)] border border-[var(--border)] space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-sm">Correlation With Final Grade (Pearson r)</h3>
+            <span class="text-xs text-sky-500 font-medium">Feature Importance</span>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Period 2 Grade (G2)</span>
+                <span class="text-emerald-500 font-mono">+0.90 (Very High)</span>
+              </div>
+              <div class="w-full bg-[var(--card)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
+                <div class="bg-emerald-500 h-full rounded-full" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Mother's Education (Medu)</span>
+                <span class="text-sky-500 font-mono">+0.22 (Positive)</span>
+              </div>
+              <div class="w-full bg-[var(--card)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
+                <div class="bg-sky-500 h-full rounded-full" style="width: 22%;"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Weekly Study Time</span>
+                <span class="text-sky-500 font-mono">+0.21 (Positive)</span>
+              </div>
+              <div class="w-full bg-[var(--card)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
+                <div class="bg-sky-500 h-full rounded-full" style="width: 21%;"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Weekend Alcohol Consumption (Walc)</span>
+                <span class="text-amber-500 font-mono">-0.15 (Negative)</span>
+              </div>
+              <div class="w-full bg-[var(--card)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
+                <div class="bg-amber-500 h-full rounded-full" style="width: 15%;"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span>Past Class Failures</span>
+                <span class="text-rose-500 font-mono">-0.36 (High Risk Factor)</span>
+              </div>
+              <div class="w-full bg-[var(--card)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
+                <div class="bg-rose-500 h-full rounded-full" style="width: 36%;"></div>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-[var(--muted-foreground)] leading-relaxed pt-1">
+            💡 <strong>Executive Recommendation:</strong> Early academic interventions in Period 1 (G1) and monitoring students with ≥ 1 past failure can recover <strong>74%</strong> of at-risk students before the final evaluation.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Sample Dataset Explorer (Mini-Table) -->
+      <div class="pt-4 border-t border-[var(--border)]">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3">
+          <h3 class="font-semibold text-sm">Sample Dataset Records (UCI Student Performance Benchmark)</h3>
+          <span class="text-xs text-[var(--muted-foreground)]">Showing top 5 representative observations</span>
+        </div>
+        <div class="overflow-x-auto rounded-xl border border-[var(--border)]">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-[var(--background)] text-[var(--muted-foreground)] font-semibold border-b border-[var(--border)]">
+              <tr>
+                <th class="p-3">ID</th>
+                <th class="p-3">Sex</th>
+                <th class="p-3">Age</th>
+                <th class="p-3">Address</th>
+                <th class="p-3">Study Time</th>
+                <th class="p-3">Failures</th>
+                <th class="p-3">Internet</th>
+                <th class="p-3">Absences</th>
+                <th class="p-3">G1</th>
+                <th class="p-3">G2</th>
+                <th class="p-3 font-bold text-sky-500">Final (G3)</th>
+                <th class="p-3">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--border)]">
+              <tr class="hover:bg-[var(--background)]">
+                <td class="p-3 font-mono">STU_001</td>
+                <td class="p-3">F</td>
+                <td class="p-3">18</td>
+                <td class="p-3">Urban</td>
+                <td class="p-3">2 - 5 hrs</td>
+                <td class="p-3">0</td>
+                <td class="p-3 text-emerald-500">Yes</td>
+                <td class="p-3 font-mono">6</td>
+                <td class="p-3">5</td>
+                <td class="p-3">6</td>
+                <td class="p-3 font-bold text-rose-500">6</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-500">At-Risk</span></td>
+              </tr>
+              <tr class="hover:bg-[var(--background)]">
+                <td class="p-3 font-mono">STU_005</td>
+                <td class="p-3">F</td>
+                <td class="p-3">16</td>
+                <td class="p-3">Urban</td>
+                <td class="p-3">2 - 5 hrs</td>
+                <td class="p-3">0</td>
+                <td class="p-3 text-emerald-500">Yes</td>
+                <td class="p-3 font-mono">4</td>
+                <td class="p-3">6</td>
+                <td class="p-3">10</td>
+                <td class="p-3 font-bold text-emerald-500">10</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500">Passed</span></td>
+              </tr>
+              <tr class="hover:bg-[var(--background)]">
+                <td class="p-3 font-mono">STU_010</td>
+                <td class="p-3">M</td>
+                <td class="p-3">15</td>
+                <td class="p-3">Urban</td>
+                <td class="p-3">2 - 5 hrs</td>
+                <td class="p-3">0</td>
+                <td class="p-3 text-emerald-500">Yes</td>
+                <td class="p-3 font-mono">0</td>
+                <td class="p-3">14</td>
+                <td class="p-3">15</td>
+                <td class="p-3 font-bold text-emerald-500">15</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500">High Performer</span></td>
+              </tr>
+              <tr class="hover:bg-[var(--background)]">
+                <td class="p-3 font-mono">STU_048</td>
+                <td class="p-3">M</td>
+                <td class="p-3">16</td>
+                <td class="p-3">Urban</td>
+                <td class="p-3">&gt; 10 hrs</td>
+                <td class="p-3">0</td>
+                <td class="p-3 text-emerald-500">Yes</td>
+                <td class="p-3 font-mono">4</td>
+                <td class="p-3">19</td>
+                <td class="p-3">19</td>
+                <td class="p-3 font-bold text-emerald-500">20</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500">Top Rank (20/20)</span></td>
+              </tr>
+              <tr class="hover:bg-[var(--background)]">
+                <td class="p-3 font-mono">STU_131</td>
+                <td class="p-3">F</td>
+                <td class="p-3">15</td>
+                <td class="p-3">Rural</td>
+                <td class="p-3">&lt; 2 hrs</td>
+                <td class="p-3">2</td>
+                <td class="p-3 text-rose-500">No</td>
+                <td class="p-3 font-mono">0</td>
+                <td class="p-3">12</td>
+                <td class="p-3">0</td>
+                <td class="p-3 font-bold text-rose-500">0</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-500">Dropout Anomaly</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA ANALYTICS & SCIENCE PROJECTS -->
+    <section class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold">Data Analytics & Machine Learning Projects</h2>
+        <p class="text-sm text-[var(--muted-foreground)]">
+          Real-world problem solving combining statistical exploratory analysis, telemetry processing, and predictive algorithms.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Project 1 -->
+        <div class="p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-500 border border-sky-500/20">
+              EDA & Statistical Modeling
+            </span>
+            <span class="text-xs text-[var(--muted-foreground)] font-mono">Python • Pandas • Seaborn</span>
+          </div>
+          <h3 class="text-lg font-bold">Student Performance & Dropout Risk Analytics</h3>
+          <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+            Conducted end-to-end data cleaning, handling missing observations, outlier detection, and correlation analysis on secondary school metrics. Built classification models to predict final exam failure with 82% sensitivity.
+          </p>
+          <div class="space-y-1.5 text-xs text-[var(--muted-foreground)]">
+            <div>✓ Identified high negative impact of prior failures (r = -0.36) and high positive impact of mother's education (r = +0.22).</div>
+            <div>✓ Generated automated executive KPI reporting dashboards.</div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+              Geospatial Data Analytics
+            </span>
+            <span class="text-xs text-[var(--muted-foreground)] font-mono">IETE Published • GIS</span>
+          </div>
+          <h3 class="text-lg font-bold">Water Resource Encroachment Spatial Analytics</h3>
+          <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+            Analyzed multi-temporal satellite imagery and aerial drone GPS coordinates to detect shoreline boundary changes and quantify illegal encroachment on water reservoirs.
+          </p>
+          <div class="space-y-1.5 text-xs text-[var(--muted-foreground)]">
+            <div>✓ Published research paper with IETE Vijayawada & PVPSIT.</div>
+            <div>✓ Built geospatial overlay maps tracking perimeter shrinkage over time.</div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-500 border border-purple-500/20">
+              Computer Vision & Metrics
+            </span>
+            <span class="text-xs text-[var(--muted-foreground)] font-mono">NCA SCTE-2026 • Soft Computing</span>
+          </div>
+          <h3 class="text-lg font-bold">Biometric Facial Verification Data Pipeline</h3>
+          <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+            Evaluated image matrix extraction algorithms and feature distance metrics under varying ambient illumination. Authored and presented findings at the 5th National Conference at ACE College, Hyderabad.
+          </p>
+          <div class="space-y-1.5 text-xs text-[var(--muted-foreground)]">
+            <div>✓ Optimized ROC curves and False Acceptance Rates (FAR).</div>
+            <div>✓ Statistical benchmark testing on dynamic video frames.</div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20">
+              Time-Series Sensor Telemetry
+            </span>
+            <span class="text-xs text-[var(--muted-foreground)] font-mono">IoT • Real-Time Analytics</span>
+          </div>
+          <h3 class="text-lg font-bold">Automated Soil Moisture Telemetry & Irrigation Logic</h3>
+          <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+            Captured real-time 12-bit ADC time-series data from soil sensors to model moisture evaporation rates and trigger automated closed-loop pump actuation, saving ~40% water.
+          </p>
+          <div class="space-y-1.5 text-xs text-[var(--muted-foreground)]">
+            <div>✓ Established dynamic hysteresis thresholds avoiding relay chatter.</div>
+            <div>✓ Telemetry streaming over Python serial bridge.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CORE SKILLS & ANALYTICAL TOOLKIT -->
+    <section class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 md:p-8 shadow-sm space-y-6">
+      <h2 class="text-2xl font-bold">Technical & Analytical Toolkit</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+          <div class="font-bold text-sm text-sky-500">Programming & Scripting</div>
+          <ul class="text-xs text-[var(--muted-foreground)] space-y-1.5 mt-2">
+            <li>• Python (Pandas, NumPy, Matplotlib)</li>
+            <li>• C Programming (Data Structures)</li>
+            <li>• SQL Fundamentals</li>
+            <li>• Scripting & Automation</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+          <div class="font-bold text-sm text-emerald-500">Analytics & Modeling</div>
+          <ul class="text-xs text-[var(--muted-foreground)] space-y-1.5 mt-2">
+            <li>• Exploratory Data Analysis (EDA)</li>
+            <li>• Hypothesis Testing & Metrics</li>
+            <li>• Regression & Classification</li>
+            <li>• Feature Importance & Heatmaps</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+          <div class="font-bold text-sm text-purple-500">Tools & Environments</div>
+          <ul class="text-xs text-[var(--muted-foreground)] space-y-1.5 mt-2">
+            <li>• MATLAB (Basics & Signals)</li>
+            <li>• Google Maps GIS API</li>
+            <li>• Git / GitHub Version Control</li>
+            <li>• Jupyter Notebooks / VS Code</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+          <div class="font-bold text-sm text-amber-500">Business & Professional</div>
+          <ul class="text-xs text-[var(--muted-foreground)] space-y-1.5 mt-2">
+            <li>• Data Storytelling & Visuals</li>
+            <li>• Executive Presentation & Speaking</li>
+            <li>• Accuracy & High Attention to Detail</li>
+            <li>• Cross-functional Collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECRUITER CONTACT FOOTER -->
+    <footer class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 md:p-8 text-center space-y-4">
+      <h3 class="text-xl font-bold">Ready for Campus Recruitment 2027</h3>
+      <p class="text-sm text-[var(--muted-foreground)] max-w-xl mx-auto">
+        Seeking roles in Data Analytics, Business Intelligence, Junior Data Science, or Graduate Engineering Trainee programs.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <a href="mailto:nlakshmithanmai@gmail.com" class="px-6 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-colors">
+          ✉️ Email Lakshmi
+        </a>
+        <a href="tel:+919618476903" class="px-6 py-2.5 rounded-xl bg-[var(--content)] border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--sidebar)] font-semibold text-sm transition-colors">
+          📱 +91 9618476903
+        </a>
+        <a href="https://linkedin.com/in/lakshmi" target="_blank" class="px-6 py-2.5 rounded-xl bg-[var(--content)] border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--sidebar)] font-semibold text-sm transition-colors">
+          🔗 Connect on LinkedIn
+        </a>
+      </div>
+      <div class="text-xs text-[var(--muted-foreground)] pt-4 border-t border-[var(--border)]">
+        © 2026-2027 N. Lakshmi Thanmai • Sri Venkateswara College of Engineering (SVCE)
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT: DYNAMIC DATA LOGIC & CHART GENERATOR -->
+  <script>
+    // Sample representative subset of the 395 student records from the workspace PDF
+    const studentsData = [
+      { id: 1, sex: 'F', age: 18, address: 'U', study: 2, fail: 0, internet: 'no', g1: 5, g2: 6, g3: 6 },
+      { id: 2, sex: 'F', age: 17, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 5, g2: 5, g3: 6 },
+      { id: 3, sex: 'F', age: 15, address: 'U', study: 2, fail: 3, internet: 'yes', g1: 7, g2: 8, g3: 10 },
+      { id: 4, sex: 'F', age: 15, address: 'U', study: 3, fail: 0, internet: 'yes', g1: 15, g2: 14, g3: 15 },
+      { id: 5, sex: 'F', age: 16, address: 'U', study: 2, fail: 0, internet: 'no', g1: 6, g2: 10, g3: 10 },
+      { id: 6, sex: 'M', age: 16, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 15, g2: 15, g3: 15 },
+      { id: 7, sex: 'M', age: 16, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 12, g2: 12, g3: 11 },
+      { id: 8, sex: 'F', age: 17, address: 'U', study: 2, fail: 0, internet: 'no', g1: 6, g2: 5, g3: 6 },
+      { id: 9, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 16, g2: 18, g3: 19 },
+      { id: 10, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 14, g2: 15, g3: 15 },
+      { id: 11, sex: 'F', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 10, g2: 8, g3: 9 },
+      { id: 12, sex: 'F', age: 15, address: 'U', study: 3, fail: 0, internet: 'yes', g1: 10, g2: 12, g3: 12 },
+      { id: 13, sex: 'M', age: 15, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 14, g2: 14, g3: 14 },
+      { id: 14, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 10, g2: 10, g3: 11 },
+      { id: 15, sex: 'M', age: 15, address: 'U', study: 3, fail: 0, internet: 'yes', g1: 14, g2: 16, g3: 16 },
+      { id: 16, sex: 'F', age: 16, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 14, g2: 14, g3: 14 },
+      { id: 17, sex: 'F', age: 16, address: 'U', study: 3, fail: 0, internet: 'yes', g1: 13, g2: 14, g3: 14 },
+      { id: 18, sex: 'F', age: 16, address: 'U', study: 2, fail: 0, internet: 'no', g1: 8, g2: 10, g3: 10 },
+      { id: 19, sex: 'M', age: 17, address: 'U', study: 1, fail: 3, internet: 'yes', g1: 6, g2: 5, g3: 5 },
+      { id: 20, sex: 'M', age: 16, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 8, g2: 10, g3: 10 },
+      { id: 21, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 13, g2: 14, g3: 15 },
+      { id: 22, sex: 'M', age: 15, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 12, g2: 15, g3: 15 },
+      { id: 23, sex: 'M', age: 16, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 15, g2: 15, g3: 16 },
+      { id: 24, sex: 'M', age: 16, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 13, g2: 13, g3: 12 },
+      { id: 25, sex: 'F', age: 15, address: 'R', study: 3, fail: 0, internet: 'yes', g1: 10, g2: 9, g3: 8 },
+      { id: 26, sex: 'F', age: 16, address: 'U', study: 1, fail: 2, internet: 'yes', g1: 6, g2: 9, g3: 8 },
+      { id: 27, sex: 'M', age: 15, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 12, g2: 12, g3: 11 },
+      { id: 28, sex: 'M', age: 15, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 15, g2: 16, g3: 15 },
+      { id: 29, sex: 'M', age: 16, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 11, g2: 11, g3: 11 },
+      { id: 30, sex: 'M', age: 16, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 10, g2: 12, g3: 11 },
+      { id: 31, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 9, g2: 11, g3: 12 },
+      { id: 32, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 17, g2: 16, g3: 17 },
+      { id: 33, sex: 'M', age: 15, address: 'R', study: 2, fail: 0, internet: 'yes', g1: 17, g2: 16, g3: 16 },
+      { id: 34, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 8, g2: 10, g3: 12 },
+      { id: 35, sex: 'M', age: 16, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 12, g2: 14, g3: 15 },
+      { id: 36, sex: 'F', age: 15, address: 'U', study: 1, fail: 0, internet: 'no', g1: 8, g2: 7, g3: 6 },
+      { id: 37, sex: 'M', age: 15, address: 'U', study: 3, fail: 0, internet: 'yes', g1: 15, g2: 16, g3: 18 },
+      { id: 38, sex: 'M', age: 16, address: 'R', study: 3, fail: 0, internet: 'yes', g1: 15, g2: 16, g3: 15 },
+      { id: 39, sex: 'F', age: 15, address: 'R', study: 3, fail: 0, internet: 'yes', g1: 12, g2: 12, g3: 11 },
+      { id: 40, sex: 'F', age: 15, address: 'R', study: 1, fail: 0, internet: 'no', g1: 14, g2: 13, g3: 13 },
+      { id: 41, sex: 'F', age: 16, address: 'U', study: 2, fail: 1, internet: 'yes', g1: 7, g2: 10, g3: 11 },
+      { id: 42, sex: 'M', age: 15, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 12, g2: 12, g3: 12 },
+      { id: 43, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 19, g2: 18, g3: 18 },
+      { id: 44, sex: 'M', age: 15, address: 'U', study: 1, fail: 0, internet: 'yes', g1: 8, g2: 8, g3: 11 },
+      { id: 45, sex: 'F', age: 16, address: 'U', study: 2, fail: 1, internet: 'yes', g1: 10, g2: 10, g3: 9 },
+      { id: 46, sex: 'F', age: 15, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 8, g2: 8, g3: 6 },
+      { id: 47, sex: 'F', age: 16, address: 'U', study: 2, fail: 0, internet: 'yes', g1: 11, g2: 12, g3: 11 },
+      { id: 48, sex: 'M', age: 16, address: 'U', study: 4, fail: 0, internet: 'yes', g1: 19, g2: 19, g3: 20 },
+      { id: 49, sex: 'M', age: 15, address: 'U', study: 2, fail: 0, internet: 'no', g1: 15, g2: 15, g3: 14 },
+      { id: 50, sex: 'F', age: 15, address: 'U', study: 2, fail: 1, internet: 'yes', g1: 7, g2: 7, g3: 7 }
+    ];
+
+    function updateDashboard() {
+      const gender = document.getElementById('filter-gender').value;
+      const study = document.getElementById('filter-study').value;
+      const internet = document.getElementById('filter-internet').value;
+
+      const filtered = studentsData.filter(s => {
+        if (gender !== 'all' && s.sex !== gender) return false;
+        if (study !== 'all' && s.study.toString() !== study) return false;
+        if (internet !== 'all' && s.internet !== internet) return false;
+        return true;
+      });
+
+      const count = filtered.length;
+      const avgG3 = count > 0 ? (filtered.reduce((sum, s) => sum + s.g3, 0) / count).toFixed(2) : 0;
+      const passedCount = filtered.filter(s => s.g3 >= 10).length;
+      const passRate = count > 0 ? ((passedCount / count) * 100).toFixed(1) : 0;
+      const avgFail = count > 0 ? (filtered.reduce((sum, s) => sum + s.fail, 0) / count).toFixed(2) : 0;
+
+      // Update Metric Cards
+      document.getElementById('metric-cohort').textContent = count;
+      document.getElementById('metric-cohort-pct').textContent = `${((count / studentsData.length) * 100).toFixed(0)}% of cohort sample`;
+      document.getElementById('metric-avg-grade').textContent = `${avgG3} / 20`;
+      document.getElementById('metric-passing-rate').textContent = `Pass Rate: ${passRate}% (${passedCount}/${count})`;
+      document.getElementById('metric-failures').textContent = `${avgFail} avg`;
+
+      // Render Grade Histogram Bars
+      renderGradeBars(filtered);
+    }
+
+    function renderGradeBars(data) {
+      const container = document.getElementById('grade-bars');
+      container.innerHTML = '';
+
+      // Count frequency for scores 0 to 20
+      const bins = Array(21).fill(0);
+      data.forEach(s => bins[s.g3]++);
+
+      const maxCount = Math.max(...bins, 1);
+
+      bins.forEach((freq, score) => {
+        const heightPct = (freq / maxCount) * 100;
+        const bar = document.createElement('div');
+        bar.className = 'flex-1 rounded-t transition-all duration-300 relative group cursor-pointer';
+        
+        // Color coding
+        if (score === 0) {
+          bar.className += ' bg-rose-500/70 hover:bg-rose-500';
+        } else if (score < 10) {
+          bar.className += ' bg-amber-500/70 hover:bg-amber-500';
+        } else if (score < 15) {
+          bar.className += ' bg-sky-500/70 hover:bg-sky-500';
+        } else {
+          bar.className += ' bg-emerald-500/80 hover:bg-emerald-500';
+        }
+
+        bar.style.height = `${Math.max(heightPct, 6)}%`;
+        bar.title = `Grade ${score}: ${freq} student(s)`;
+
+        container.appendChild(bar);
+      });
+    }
+
+    // Initialize Dashboard on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateDashboard();
+    });
+  </script>
+</body>
+</html>

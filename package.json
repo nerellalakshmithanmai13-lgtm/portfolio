@@ -1,0 +1,18 @@
+{
+  "name": "lakshmi-thanmai-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for N. Lakshmi Thanmai - Final-Year B.Tech ECE (2027 Batch)",
+  "private": true,
+  "scripts": {
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "ece",
+    "embedded-systems",
+    "iot",
+    "campus-recruitment-2027"
+  ],
+  "author": "N. Lakshmi Thanmai",
+  "license": "MIT"
+}
